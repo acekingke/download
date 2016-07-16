@@ -17,7 +17,7 @@ object_files = http.o main_arg.o md5.o test.o thread_template.o main.o mem_alloc
 
 final_objects = download
 all : $(final_objects)
-	$(CC) $(BUSWIDTHLINK)   $(PlatformLibs) -o $@ $(object_files) -lpthread
+	$(C++) $(CFLAGS) -o $@ $(object_files) -lpthread
 clean :
 	 @rm -rf $(object_files)
 	 @rm -rf $(final_objects)
